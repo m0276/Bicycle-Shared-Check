@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Stations List</title>
+</head>
+<body>
+<h1>Stations</h1>
+<ul>
+    <li th:each="station : ${stationsInformation}">
+        stations name : " <span th:text="${station.getName()}"></span> " <br>
+        percent : " <span th:text="${station.getSharedPercent()}"></span> " <br>
+    </li>
+</ul>
+</body>
+</html>
